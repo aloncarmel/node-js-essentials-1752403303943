@@ -1,0 +1,28 @@
+id: npm_basics
+learningObjectives:
+  - Understand npm's role in dependency management
+hints:
+  - Explore the [npm docs](https://docs.npmjs.com/) for your power-boost.
+  - 'Who moved my `node_modules`?' will no longer be your nightmare!
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: Ever wondered how Node.js projects manage seemingly endless dependencies?
+          - text: Meet npm, the superhero package manager that Node.js can't live without!
+          - text: With simple commands like `npm install`, you're in control of installing,
+              updating, and removing packages.
+          - text: A properly managed `package.json` file in your project ensures your app
+              runs effortlessly on different machines.
+          - text: Managing dependencies with ease? Now that sounds like a plan.
+          - text: Take a moment to explore, then hit continue when you're ready!
+    - actionId: ready_message
+      params:
+        person: lucca
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: finish_step
