@@ -1,21 +1,14 @@
 id: nodejs_essentials
 title: Node.js Essentials
-subtitle: "Build scalable apps: Get started with Node.js"
-description: >-
-  Are you ready to dive into the world of server-side JavaScript? Join me on
-  this quest where we'll unlock the mysteries of Node.js, a powerful runtime
-  environment that empowers developers to build scalable, high-performance
-  applications. 
-
+subtitle: 'Build scalable apps: Get started with Node.js'
+description: |-
+  Are you ready to dive into the world of server-side JavaScript? Join me on this quest where we'll unlock the mysteries of Node.js, a powerful runtime environment that empowers developers to build scalable, high-performance applications. 
 
   We'll start by understanding what makes Node.js unique and how its event-driven, non-blocking architecture sets it apart.
 
-
   You'll gain insights into setting up a Node.js environment, constructing a simple server, and working with core modules.
 
-
   Together, we'll explore asynchronous programming through promises and async/await, and learn to manage dependencies effectively with npm.
-
 
   By the end, you'll have the foundational knowledge to jump-start your journey into backend development, using Node.js to bring your ideas to life and delight users with seamless experiences!
 level: beginner
