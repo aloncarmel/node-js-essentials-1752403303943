@@ -1,0 +1,30 @@
+id: building_a_simple_server
+learningObjectives:
+  - Create a basic server with Node.js
+hints:
+  - "[Check out this simple server
+    example](https://nodejs.dev/en/learn/run-nodejs-server/) for extra
+    guidance."
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: It's server time! Let's build a basic HTTP server in Node.js.
+          - text: "This one-liner: `const http = require('http');` deserves an award for
+              kicking off a Node.js project."
+          - text: We'll use Node's HTTP module to set up a server that responds with 'Hello
+              World!'.
+          - text: The magic happens with `http.createServer()` and you'll bind it to a port
+              number like 3000.
+          - text: Understanding these fundamentals is crucial for anything more complex.
+          - text: Hit that continue button when you're ready to dive deeper!
+    - actionId: ready_message
+      params:
+        person: lucca
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: finish_step
