@@ -1,0 +1,32 @@
+id: introduction_to_nodejs
+learningObjectives:
+  - Understand the basics and purpose of Node.js
+hints:
+  - For more on the Node.js architecture, check this [introductory
+    guide](https://nodejs.org/en/docs/guides/)
+  - No worries if you're already familiar; feel free to skim and move on!
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: Welcome to the Node.js Essentials quest!
+          - text: Node.js isn't just another runtime; it's the powerhouse that brought
+              JavaScript to the server side.
+          - text: Let's explore what makes Node.js special, starting with its unique ability
+              to handle thousands of connections simultaneously thanks to its
+              event-driven, non-blocking I/O model.
+          - text: Node.js is built on Chrome's V8 JavaScript engine, known for its speed and
+              efficiency.
+          - text: Here you'll start by appreciating why businesses love using Node.js for
+              full-stack solutions.
+          - text: When you're ready to continue, just click the button!
+    - actionId: ready_message
+      params:
+        person: lucca
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: finish_step
