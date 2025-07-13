@@ -1,0 +1,30 @@
+id: understanding_core_modules
+learningObjectives:
+  - Explore Node.js core modules
+hints:
+  - Check the [Node.js API docs](https://nodejs.org/dist/latest-v16.x/docs/api/)
+    to unravel the secrets of your core modules.
+  - With 'require', you gain superpowers one module at a time!
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: Node.js keeps things minimal, but don't underestimate its core modules!
+          - text: Modules like 'fs' for file system operations or 'path' for handling
+              directory paths exemplify Node's versatility.
+          - text: These built-in modules free you from the shackles of unnecessary external
+              dependencies, boosting performance and security.
+          - text: Curious about transforming boring tasks into dynamic functionalities with
+              these modules? That's what we'll tackle next!
+          - text: Click continue whenever you're keen to dig deeper into Node's treasure
+              chest of modules.
+    - actionId: ready_message
+      params:
+        person: lucca
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: finish_step
