@@ -1,0 +1,60 @@
+id: quiz_the_unique_architecture
+learningObjectives:
+  - Identify key features of Node.js architecture
+hints:
+  - Consider how Node.js handles asynchronous tasks.
+  - Think about what 'event-driven' signals in a system.
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: Quiz time! Let's recap the architectural concepts of Node.js.
+          - text: Why is Node's architecture able to handle many connections concurrently?
+    - actionId: quiz_message
+      name: quiz
+      params:
+        person: lucca
+        options:
+          - It's single-threaded with non-blocking event-driven architecture.
+          - It works with multiple threads for each connection.
+          - Node.js uses blocking I/O.
+trigger:
+  type: chat_form_submitted
+  flowNode:
+    switch:
+      key: ${formSubmission}
+      cases:
+        A:
+          do:
+            - actionId: bot_message
+              params:
+                person: lucca
+                messages:
+                  - text: Spot on! Node.js excels in its non-blocking, event-driven environment,
+                      simply great for scalability.
+            - actionId: finish_step
+        B:
+          do:
+            - actionId: bot_message
+              params:
+                person: lucca
+                messages:
+                  - text: Almost there, but Node.js actually runs on a single-threaded model with
+                      non-blocking architecture. Rethink the scenario and give
+                      it another try!
+            - actionId: replay_action
+              params:
+                actionName: quiz
+        C:
+          do:
+            - actionId: bot_message
+              params:
+                person: lucca
+                messages:
+                  - text: Oops, not quite. Node.js prides itself on its non-blocking I/O model,
+                      enabling efficient concurrency! Retry with this in mind.
+            - actionId: replay_action
+              params:
+                actionName: quiz
