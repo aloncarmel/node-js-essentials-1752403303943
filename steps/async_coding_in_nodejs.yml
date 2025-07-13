@@ -1,0 +1,30 @@
+id: async_coding_in_nodejs
+learningObjectives:
+  - Grasp the role of async programming in Node.js
+hints:
+  - For a head-start, explore the basics of
+    [promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises).
+  - Async/await makes your code easier to manage, so I suggest learning about
+    them too.
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: Ah, the thrilling world of asynchronous coding!
+          - text: Node.js leverages JavaScript's async capabilities to the fullest.
+          - text: Promises and async/await provide elegant solutions to callback hell,
+              making your code cleaner and more readable.
+          - text: Being an adept of async means faster, more efficient operations.
+          - text: Believe me, your future-self will thank you for mastering this
+              indispensable skill.
+          - text: When you're ready for a slight brain-twist, click on!
+    - actionId: ready_message
+      params:
+        person: lucca
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: finish_step
