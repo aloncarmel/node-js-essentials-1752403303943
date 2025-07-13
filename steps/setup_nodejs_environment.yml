@@ -1,0 +1,32 @@
+id: setup_nodejs_environment
+learningObjectives:
+  - Learn how to set up a Node.js environment
+hints:
+  - Ensure you download the version suited for your OS.
+  - Following [this installation
+    guide](https://nodejs.dev/en/learn/how-to-install-nodejs/) can save you from
+    common pitfalls.
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: Now that we've explored the 'why', let's get our hands dirty with the
+              'how.'
+          - text: Setting up a Node.js environment starts with installing Node.js and npm,
+              its package manager.
+          - text: Once you download them from the [official Node.js
+              site](https://nodejs.org), you can create a project directory and
+              initialize your package.json file.
+          - text: This setup will allow you to manage your project's dependencies with ease.
+          - text: Ready to move on to constructing your first Node.js server? Just click
+              continue whenever you're set!
+    - actionId: ready_message
+      params:
+        person: lucca
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: finish_step
